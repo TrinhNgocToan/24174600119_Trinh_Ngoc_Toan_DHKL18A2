@@ -2,3 +2,5 @@
   
 
   # mon tin hoc co so
+  print("Hello,world!")
+  
