@@ -1,22 +1,15 @@
 import math
 
-# Định nghĩa hằng số pi
-pi = 3.14
+input_r = float(input("nhập bán kính của mặt đáy:"))
+input_h = float(input("nhập chiều cao của khối trụ:"))
 
-# Nhập bán kính và chiều cao từ bàn phím
-bankinh = float(input("Nhập bán kính của khối trụ: "))
-chieucao = float(input("Nhập chiều cao của khối trụ: "))
-
-# Tính diện tích xung quanh
-dien_tich_xq = 2 * pi * bankinh * chieucao
-
-# Tính diện tích toàn phần
-dien_tich_toanphan = 2 * pi * bankinh * (bankinh + chieucao)
-
-# Tính thể tích
-the_tich = pi * bankinh**2 * chieucao
-
-# In kết quả
-print(f"Diện tích xung quanh: {dien_tich_xq:.2f}")
-print(f"Diện tích toàn phần: {dien_tich_toanphan:.2f}")
-print(f"Thể tích: {the_tich:.2f}")
+if input_r < 0 or input_h < 0:
+    print("bán kính hoặc chiều cao không được âm")
+else:
+    pi = 3,14
+    sxq = 2 * pi * input_r * input_h
+    stp = sxq + (2 * pi * (input_r)**2)
+    thetich = pi * (input_r ** 2) * input_h
+    print(f"diện tích xung quanh là: {sxq:.2f}")
+    print(f"diện tích toàn phần là: {stp:.2f}")
+    print(f"thể tích là: {thetich:.2f}")
